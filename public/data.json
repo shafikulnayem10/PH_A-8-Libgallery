@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Silent Echo",
+    "author": "Elena Vance",
+    "description": "A haunting story about a small town's secrets revealed through an old radio.",
+    "category": "Story",
+    "available_quantity": 4,
+    "image_url": "https://m.media-amazon.com/images/I/81IofJrFFKL._SY466_.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Quantum Leap: A Beginner's Guide",
+    "author": "Dr. Julian Thorne",
+    "description": "Breaking down the complexities of quantum mechanics into digestible concepts.",
+    "category": "Science",
+    "available_quantity": 12,
+    "image_url": "https://m.media-amazon.com/images/I/41sMtfvMW9L._SY445_SX342_QL70_FMwebp_.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Architecting the Cloud",
+    "author": "Sarah Jenkins",
+    "description": "A deep dive into scalable cloud infrastructure and microservices.",
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "https://m.media-amazon.com/images/I/51LTnwBLFQL._SY445_SX342_FMwebp_.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Beyond the Event Horizon",
+    "author": "Marcus Sol",
+    "description": "An exploration of black holes and the latest discoveries in astrophysics.",
+    "category": "Science",
+    "available_quantity": 15,
+    "image_url": "https://m.media-amazon.com/images/I/91hDID5UidL._CLa%7C2865,2500%7C81lNtFFgqrL.jpg,91UDbXzK22L.jpg%7C0,0,1302,2500+1563,0,1302,2500+651,0,1563,2500__UY450_FMwebp_.jpg?aicid=books-design-system-web"
+  },
+  {
+    "id": 5,
+    "title": "Rust for Systems Programming",
+    "author": "Leo Sterling",
+    "description": "Mastering memory safety and performance with the Rust programming language.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://m.media-amazon.com/images/I/41lz+RC9B1L._SX342_SY445_FMwebp_.jpg"
+  },
+  {
+    "id": 6,
+    "title": "The Midnight Gardener",
+    "author": "Clara Whitmore",
+    "description": "An enchanting story about a garden that only blooms under moonlight.",
+    "category": "Story",
+    "available_quantity": 20,
+    "image_url": "https://m.media-amazon.com/images/I/51WmTUxaleL._SY445_SX342_FMwebp_.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Genetics and the Future",
+    "author": "Dr. Aris Thorne",
+    "description": "How CRISPR and gene editing are redefining modern medicine.",
+    "category": "Science",
+    "available_quantity": 10,
+    "image_url": "https://m.media-amazon.com/images/I/31qQddpfGBL._SX342_SY445_FMwebp_.jpg"
+  },
+  {
+    "id": 8,
+    "title": "AI: The Final Frontier",
+    "author": "Nadia Volkov",
+    "description": "Examining the ethics and evolution of artificial general intelligence.",
+    "category": "Tech",
+    "available_quantity": 5,
+    "image_url": "https://m.media-amazon.com/images/I/61QAept6cCL._SY466_.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Shadows of the Empire",
+    "author": "Garrison Kaine",
+    "description": "An epic story of political intrigue and rebellion in a distant galaxy.",
+    "category": "Story",
+    "available_quantity": 9,
+    "image_url": "https://m.media-amazon.com/images/I/51H3F724K0L._SY445_SX342_FMwebp_.jpg"
+  },
+  {
+    "id": 10,
+    "title": "The Microscopic World",
+    "author": "Linda Moss",
+    "description": "Revealing the hidden life of bacteria and viruses through high-res imaging.",
+    "category": "Science",
+    "available_quantity": 18,
+    "image_url": "https://m.media-amazon.com/images/I/81o9uA01b-L._SY385_.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Cybersecurity Essentials",
+    "author": "Victor Zhao",
+    "description": "A practical guide to protecting networks from modern digital threats.",
+    "category": "Tech",
+    "available_quantity": 14,
+    "image_url": "https://m.media-amazon.com/images/I/41CVobi3grL._SX342_SY445_FMwebp_.jpg"
+  },
+  {
+    "id": 12,
+    "title": "The Last Navigator",
+    "author": "Siona Reed",
+    "description": "A story of a lone pilot searching for a lost colony in the outer rim.",
+    "category": "Story",
+    "available_quantity": 7,
+    "image_url": "https://m.media-amazon.com/images/I/71QQLzMRE9L._SY466_.jpg"
+  }
+]

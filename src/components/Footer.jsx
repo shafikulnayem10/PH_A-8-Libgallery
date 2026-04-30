@@ -9,6 +9,8 @@ import {
   FaPhoneAlt,
   FaMapMarkerAlt
 } from 'react-icons/fa';
+import Image from 'next/image';
+import logo from "../../public/Libgallery_Logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,8 +23,8 @@ const Footer = () => {
          
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-white font-bold">
-                L
+              <div className="w-8 h-8 rounded flex items-center justify-center text-white font-bold">
+                <Image src={logo} alt="Libgallery Logo" width={30} height={30} />
               </div>
               <span className="text-xl font-bold text-gray-900 tracking-tight">
                 Libgallery
