@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import PromoMarquee from './PromoMarquee';
 
 const Banner = () => {
   return (
@@ -10,13 +11,7 @@ const Banner = () => {
       <div className="relative max-w-7xl mx-auto px-6 py-28 md:py-44 flex flex-col items-center text-center">
         
        
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider mb-8 animate-fade-in">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
-          </span>
-          New Arrivals Just Added
-        </div>
+       <PromoMarquee></PromoMarquee>
 
         
         <h1 className="text-6xl md:text-8xl font-extrabold text-gray-900 tracking-tighter leading-[1.1] mb-8">
