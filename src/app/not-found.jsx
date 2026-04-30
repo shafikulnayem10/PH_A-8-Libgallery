@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function NotFoundPage() {
   return (
     <div className="min-h-[80vh] flex flex-col items-center justify-center px-4 text-center">
-      {/* Visual Element */}
+    
       <div className="relative mb-8">
         <h1 className="text-9xl font-black text-gray-200">404</h1>
         <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-indigo-600 whitespace-nowrap">
