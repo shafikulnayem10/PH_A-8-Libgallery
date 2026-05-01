@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#  Libgallery – Online Book Borrowing Platform
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [https://ph-a-8-libgallery.vercel.app](https://ph-a-8-libgallery.vercel.app) with your browser to see the result.
+## Project Purpose
+**Libgallery** is a seamless and modern web application designed to digitize the traditional library experience.  
+The platform allows users to explore a vast collection of books, filter them by specific categories (Story, Tech, Science), and borrow titles digitally.  
+It prioritizes high performance and security to provide a smooth user experience for book enthusiasts.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##  Live URL
+https://ph-a-8-libgallery.vercel.app/
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+##  Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Authentication System**  
+  Fully integrated **BetterAuth** system supporting Email/Password and **Google Social Login**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Dynamic Browsing**  
+  "All Books" page with:
+  - Search Bar (by title)
+  - Category Sidebar (real-time filtering)
 
-## Deploy on Vercel
+-  **Private Routes**  
+  Secure access to:
+  - Single Book Details  
+  - User Profile  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+-  **Digital Borrowing System**  
+  - Real-time stock tracking (e.g., *5 copies left*)  
+  - Borrow confirmation with toast notifications  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-  **Profile Management**  
+  Users can:
+  - View personal info  
+  - Update name & profile image  
+
+-  **Responsive Design**  
+  Built with **HeroUI + Tailwind CSS**  
+  Fully optimized for:
+  - Mobile  
+  - Tablet  
+  - Desktop  
+
+-  **Interactive Home Page**  
+  Includes:
+  - Hero Banner  
+  - Scrolling Marquee (new arrivals)  
+  - Featured Books section  
+
+---
+
+##  Tech Stack & NPM Packages
+
+###  Core Technologies
+- **Next.js** – React framework for SSR & routing  
+- **Tailwind CSS** – Utility-first styling  
+- **HeroUI / DaisyUI** – UI component libraries  
+- **BetterAuth** – Authentication system  
+- **MongoDB** – Database  
+
+###  NPM Packages
+- `@heroui/react` – UI components  
+- `better-auth` – Auth & session management  
+- `sonner` / `react-hot-toast` – Toast notifications  
+- `react-icons` – Icons  
+- `swiper` – slider  
+
+---
+
