@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import React from 'react';
 import Link from 'next/link';
 import { getAllBooks, getCategories } from '@/lib/database';
@@ -6,7 +7,7 @@ import SearchInput from '@/components/SearchInput';
 
 export default async function AllBooksPage({ searchParams }) {
   const [books, categories] = await Promise.all([
-    getAllBooks(),
+     getAllBooks(),
     getCategories()
   ]);
   
