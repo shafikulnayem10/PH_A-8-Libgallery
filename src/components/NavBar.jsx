@@ -18,7 +18,7 @@ const Navbar = () => {
     <div className="border-b px-2 sticky top-0 z-50 bg-white/90 backdrop-blur-md">
       <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
         
-        {/* LEFT: Website Logo (Links to Home) */}
+      
         <div className="flex gap-2 items-center">
           <Link href="/" className="flex items-center gap-2">
             <Image
@@ -33,7 +33,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* CENTER: Navigation Links */}
+       
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
           <li>
             <Link href="/" className="hover:text-indigo-600 transition-colors">
@@ -52,7 +52,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* RIGHT: Conditional  */}
+      
         <div className="flex items-center gap-4">
           {!user ? (
            

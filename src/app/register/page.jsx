@@ -13,6 +13,7 @@ import {
 import { useRouter } from "next/navigation";
 import { toast } from "sonner"; 
 import { FcGoogle } from "react-icons/fc";
+import { GrGoogle } from "react-icons/gr";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -44,10 +45,10 @@ export default function RegisterPage() {
   };
 
  
-  const handleGoogleLogin = async () => {
+  const handleGoogleRegister = async () => {
     const { data, error } = await authClient.signIn.social({
       provider: "google",
-      callbackURL: "/login", 
+      callbackURL: "/", 
     });
 
     if (error) {
@@ -55,8 +56,7 @@ export default function RegisterPage() {
     } else {
       
       toast.success("Google account linked! Proceed to login.");
-      authClient.signOut();
-        window.location.href = "/login";
+      router.push("/");
     }
   };
 
@@ -75,10 +75,12 @@ export default function RegisterPage() {
         <Button
           fullWidth
           variant="bordered"
-          onPress={handleGoogleLogin}
-          startContent={<FcGoogle className="text-xl" />}
-          className="border-slate-200 font-semibold text-slate-600 hover:bg-slate-50 h-12 rounded-xl mb-6"
+
+          onPress={handleGoogleRegister}
+          
+          className="border-blue-200 font-semibold text-indigo-600 hover:bg-slate-50 h-12 rounded-xl mb-6"
         >
+          <GrGoogle className="text-blue-500" /> 
           Register with Google
         </Button>
 
