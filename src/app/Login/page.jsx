@@ -35,7 +35,7 @@ export default function LogInPage() {
      
       toast.error(error.message || "Login failed. Please check your credentials.");
     } else {
-      toast.success("Welcome back!");
+      toast.success("Welcome !");
       router.push("/");
     }
   };

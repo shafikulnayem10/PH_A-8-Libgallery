@@ -58,7 +58,7 @@ const Navbar = () => {
            
             <ul className="flex items-center text-sm gap-5 font-medium">
               <li>
-                <Link href="/Login" className="hover:text-indigo-600">
+                <Link href="/login" className="hover:text-indigo-600">
                  <Button variant="outline" size="sm" className="bg-white text-indigo-600 border-indigo-600 hover:bg-indigo-100">
                     Log In
                   </Button>

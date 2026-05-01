@@ -21,11 +21,12 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50/50 overflow-hidden">
+    <section className="py-20 bg-slate-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
+      
         <div className="mb-12">
-          <h2 className="text-4xl font-serif font-bold text-gray-800">
-            What Our <span className="text-orange-400">Readers</span> Say
+          <h2 className="text-4xl font-serif font-bold text-slate-800">
+            What Our <span className="text-indigo-600">Readers</span> Say
           </h2>
         </div>
 
@@ -55,34 +56,41 @@ const TestimonialsSection = () => {
             [&_.swiper-pagination-bullet]:h-2.5 
             [&_.swiper-pagination-bullet]:bg-slate-300 
             [&_.swiper-pagination-bullet]:opacity-100
-            [&_.swiper-pagination-bullet-active]:!bg-orange-400 
+            [&_.swiper-pagination-bullet-active]:!bg-indigo-600 
             [&_.swiper-pagination-bullet-active]:w-6 
             [&_.swiper-pagination-bullet-active]:rounded-full
             [&_.swiper-pagination-bullet-active]:transition-all"
         >
           {reviews.map((item) => (
             <SwiperSlide key={item.id} className="h-auto">
-              <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col group">
+              <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-indigo-50 transition-all duration-300 h-full flex flex-col group">
+                
+               
                 <div className="flex gap-1 mb-5">
                   {[...Array(5)].map((_, index) => (
                     <FaStar 
                       key={index} 
-                      className={`text-lg ${index < item.rating ? "text-orange-400" : "text-gray-200"}`} 
+                      className={`text-lg ${index < item.rating ? "text-indigo-600" : "text-slate-200"}`} 
                     />
                   ))}
                 </div>
 
-                <p className="text-gray-600 italic leading-relaxed mb-10 flex-grow text-lg">
+              
+                <p className="text-slate-600 italic leading-relaxed mb-10 flex-grow text-lg">
                   "{item.review}"
                 </p>
 
-                <div className="w-full h-px bg-gray-100 mb-6 group-hover:bg-orange-100 transition-colors" />
+              
+                <div className="w-full h-px bg-slate-100 mb-6 group-hover:bg-indigo-100 transition-colors" />
 
+               
                 <div className="flex items-center gap-4">
                  
                   <div>
-                    <h4 className="font-bold text-gray-900 leading-tight text-lg">{item.name}</h4>
-                    <p className="text-sm text-gray-400 font-medium">{item.role}</p>
+                    <h4 className="font-bold text-slate-900 leading-tight text-lg group-hover:text-indigo-600 transition-colors">
+                      {item.name}
+                    </h4>
+                    <p className="text-sm text-slate-400 font-medium">{item.role}</p>
                   </div>
                 </div>
               </div>
