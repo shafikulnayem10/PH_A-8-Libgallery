@@ -98,7 +98,7 @@ export default function LoginPage() {
             type="submit"
             className="w-full bg-indigo-600 text-white font-bold h-12"
           >
-            <Check className="size-4" />
+            
             Login 
           </Button>
         </Form>
