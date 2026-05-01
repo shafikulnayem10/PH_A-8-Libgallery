@@ -58,7 +58,7 @@ export default function LoginPage() {
 
       <Card className="border shadow-lg w-full max-w-md py-10 px-8 flex flex-col gap-6">
         <div className="text-center space-y-2">
-          <h1 className="text-3xl font-black text-gray-900">Welcome Back</h1>
+          <h1 className="text-3xl font-black text-gray-900">Welcome !</h1>
           <p className="text-gray-500 text-sm">Please enter your details to sign in.</p>
         </div>
 
@@ -99,7 +99,7 @@ export default function LoginPage() {
             className="w-full bg-indigo-600 text-white font-bold h-12"
           >
             <Check className="size-4" />
-            Login to Libgallery
+            Login 
           </Button>
         </Form>
 
@@ -112,9 +112,9 @@ export default function LoginPage() {
         <Button
           onClick={handleGoogleLogIn}
           variant="bordered"
-          className="w-full border-gray-200 font-bold h-12 bg-amber-100 hover:bg-amber-200 transition-colors"
+          className="w-full border-indigo-400 bg-indigo-600 font-bold h-12 text-white hover:bg-indigo-200 transition-colors"
         >
-          <GrGoogle className="text-red-500" />
+          <GrGoogle className="text-white" />
           Continue with Google
         </Button>
 

@@ -78,9 +78,9 @@ export default function RegisterPage() {
 
           onPress={handleGoogleRegister}
           
-          className="border-blue-200 font-semibold text-indigo-600 hover:bg-slate-50 h-12 rounded-xl mb-6"
+         className="bg-indigo-600 rounded-4xl text-white font-medium h-10 px-4 rounded hover:bg-indigo-700 transition-colors"
         >
-          <GrGoogle className="text-blue-500" /> 
+          <GrGoogle className="text-white" /> 
           Register with Google
         </Button>
 

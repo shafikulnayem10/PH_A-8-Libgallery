@@ -61,8 +61,8 @@ const Navbar = () => {
            
             <ul className="flex items-center text-sm gap-5 font-medium">
               <li>
-                <Link href="/login" className="hover:text-indigo-600">
-                 <Button variant="outline" size="sm" className="bg-white text-indigo-600 border-indigo-600 hover:bg-indigo-100">
+                <Link href="/login" className="">
+                 <Button variant="outline" size="sm" className="bg-indigo-600 rounded-4xl text-white font-medium h-10 px-4 rounded hover:bg-indigo-700 transition-colors">
                     Log In
                   </Button>
                 </Link>
@@ -96,7 +96,7 @@ const Navbar = () => {
                 size="sm" 
                 variant="flat" 
                 color="danger"
-                className="font-medium"
+                className="font-medium bg-indigo-400 text-warning-soft-hover hover:bg-indigo-500 transition-colors"
               >
                 Log Out
               </Button>
