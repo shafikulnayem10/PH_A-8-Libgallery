@@ -41,7 +41,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/all-books" className="hover:text-indigo-600 transition-colors">
+            <Link href="/allbooks" className="hover:text-indigo-600 transition-colors">
               All Books
             </Link>
           </li>
