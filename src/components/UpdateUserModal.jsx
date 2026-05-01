@@ -23,11 +23,16 @@ const onSubmit = async (e) => {
       onRequest: () => {
         toast.loading("Updating profile...", { id: "update-user" });
       },
-      onSuccess: () => {
-        toast.success("Profile updated successfully!", { id: "update-user" });
-        refetch(); 
-        setIsOpen(false);
-      },
+    onSuccess: () => {
+  toast.success("Profile updated successfully!", { id: "update-user" });
+  
+ 
+  window.location.reload(); 
+
+
+
+  onOpenChange(false);
+},
       onError: (ctx) => {
         toast.error(ctx.error.message || "Failed to update profile", { id: "update-user" });
       }
