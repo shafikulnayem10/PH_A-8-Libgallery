@@ -96,8 +96,8 @@ const Navbar = () => {
                 size="sm" 
                 variant="flat" 
                 color="danger"
-                className="font-medium bg-indigo-400 text-warning-soft-hover hover:bg-indigo-500 transition-colors"
-              >
+                className="bg-indigo-600 rounded-4xl text-white font-medium h-10 px-4 rounded hover:bg-indigo-700 transition-colors">
+              
                 Log Out
               </Button>
             </div>
