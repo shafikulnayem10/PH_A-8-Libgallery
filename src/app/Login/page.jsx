@@ -34,7 +34,7 @@ export default function LoginPage() {
     if (error) {
       toast.error(error.message || "Login failed. Please check your credentials.");
     } else {
-      toast.success("Welcome back!");
+      toast.success("Welcome !");
     
       router.push("/"); 
       router.refresh();
@@ -112,7 +112,7 @@ export default function LoginPage() {
         <Button
           onClick={handleGoogleLogIn}
           variant="bordered"
-          className="w-full border-gray-200 font-bold h-12"
+          className="w-full border-gray-200 font-bold h-12 bg-amber-100 hover:bg-amber-200 transition-colors"
         >
           <GrGoogle className="text-red-500" />
           Continue with Google
