@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import BookCard from "./BookCard";
 
 const FeaturedBooks = async () => {

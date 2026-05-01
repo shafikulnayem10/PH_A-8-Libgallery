@@ -1,3 +1,5 @@
+
+export const dynamic = 'force-dynamic';
 export async function getAllBooks() {
   const res = await fetch('https://ph-a-8-libgallery.vercel.app/data.json', {
     next: { revalidate: 3600 }
