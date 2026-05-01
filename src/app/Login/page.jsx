@@ -34,8 +34,8 @@ export default function LoginPage() {
     if (error) {
       toast.error(error.message || "Login failed. Please check your credentials.");
     } else {
-      toast.success("Welcome!");
-      // Directly push to home or dashboard instead of checking searchParams
+      toast.success("Welcome back!");
+    
       router.push("/"); 
       router.refresh();
     }
@@ -45,7 +45,7 @@ export default function LoginPage() {
     try {
       await authClient.signIn.social({
         provider: "google",
-        callbackURL: "/", // Hardcoded fallback URL
+        callbackURL: "/", 
       });
     } catch (err) {
       toast.error("Google sign-in failed.");
