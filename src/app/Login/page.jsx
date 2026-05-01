@@ -13,11 +13,13 @@ import {
 } from "@heroui/react";
 import { GrGoogle } from "react-icons/gr";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation"; 
 import toast, { Toaster } from "react-hot-toast";
 
 export default function LogInPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirect = searchParams.get("redirect") || "/";
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -28,23 +30,21 @@ export default function LogInPage() {
     const { data, error } = await authClient.signIn.email({
       email,
       password,
-      callbackURL: "/", 
     });
 
     if (error) {
-     
       toast.error(error.message || "Login failed. Please check your credentials.");
     } else {
-      toast.success("Welcome !");
-      router.push("/");
+      toast.success("Welcome!");
+      router.push(redirect); 
     }
   };
 
   const handleGoogleLogIn = async () => {
     try {
       await authClient.signIn.social({
-        provider: 'google',
-        callbackURL: "/",
+        provider: "google",
+        callbackURL: redirect, 
       });
     } catch (err) {
       toast.error("Google sign-in failed.");
@@ -53,7 +53,6 @@ export default function LogInPage() {
 
   return (
     <div className="flex justify-center items-center min-h-[80vh]">
-     
       <Toaster position="top-center" reverseOrder={false} />
 
       <Card className="border shadow-lg w-full max-w-md py-10 px-8 flex flex-col gap-6">
@@ -94,8 +93,8 @@ export default function LogInPage() {
             <FieldError className="text-xs text-red-500" />
           </TextField>
 
-          <Button 
-            type="submit" 
+          <Button
+            type="submit"
             className="w-full bg-indigo-600 text-white font-bold h-12"
           >
             <Check className="size-4" />
@@ -109,12 +108,12 @@ export default function LogInPage() {
           <div className="h-px bg-gray-200 flex-1"></div>
         </div>
 
-        <Button 
-          onClick={handleGoogleLogIn} 
-          variant="bordered" 
+        <Button
+          onClick={handleGoogleLogIn}
+          variant="bordered"
           className="w-full border-gray-200 font-bold h-12"
         >
-          <GrGoogle className="text-red-500" /> 
+          <GrGoogle className="text-red-500" />
           Continue with Google
         </Button>
 

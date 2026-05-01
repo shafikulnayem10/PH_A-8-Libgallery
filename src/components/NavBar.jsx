@@ -4,7 +4,7 @@ import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/Libgallery_Logo.png";
+import logo from "../../public/LibGalleryLogo_V2.jpeg";
 
 const Navbar = () => {
   const userData = authClient.useSession();
@@ -12,6 +12,7 @@ const Navbar = () => {
 
   const handleLogOut = async () => {
     await authClient.signOut();
+    console.log("User logged out successfully.");
   };
 
   return (
@@ -20,17 +21,20 @@ const Navbar = () => {
         
       
         <div className="flex gap-2 items-center">
-          <Link href="/" className="flex items-center gap-2">
-            <Image 
-  src={logo} 
-  alt="Libgallery" 
-  width={30} 
-  height={30} 
-  style={{ height: 'auto' }} 
-/>
-            <h3 className="font-black text-lg tracking-tighter"><span className="text-indigo-600">Lib</span>gallery</h3>
-          </Link>
-        </div>
+  <Link href="/" className="flex items-center gap-2">
+    <Image 
+      src={logo} 
+      alt="Libgallery" 
+      width={50} 
+      height={50} 
+      className="rounded-full object-cover" 
+      style={{ height: '50px', width: '50px' }} 
+    />
+    <h3 className="font-black text-lg tracking-tighter">
+      <span className="text-indigo-600">Lib</span>gallery
+    </h3>
+  </Link>
+</div>
 
        
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium">

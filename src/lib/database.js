@@ -6,12 +6,18 @@ export async function getAllBooks() {
   return res.json();
 }
 
-
 export async function getCategories() {
-
   const res = await fetch('http://localhost:3000/category.json', {
     next: { revalidate: 3600 }
   });
   if (!res.ok) throw new Error("Failed to fetch categories");
   return res.json();
+}
+
+
+export async function getBookDetailsById(id) {
+  const books = await getAllBooks();
+ 
+  const book = books.find((p) => p.id == id);
+  return book;
 }

@@ -31,7 +31,7 @@ const Banner = () => {
        
         <div className="flex flex-col sm:flex-row items-center gap-6">
           <Link
-            href="/all-books"
+            href="/allbooks"
             className="group relative px-10 py-5 bg-gray-900 text-white font-bold rounded-2xl transition-all duration-300 hover:bg-indigo-600 hover:shadow-2xl hover:shadow-indigo-200 active:scale-95"
           >
             Browse Collection

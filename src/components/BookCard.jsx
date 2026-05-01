@@ -69,7 +69,7 @@ const BookCard = ({ book }) => {
 
         <HeroLink
           as={NextLink}
-          href={`/all-books/${book.id}`}
+          href={`/allbooks/${book.id}`}
           className="font-bold text-indigo-600 hover:text-indigo-800 transition-colors flex items-center gap-1 group"
         >
           View Details

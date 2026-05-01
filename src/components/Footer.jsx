@@ -10,7 +10,7 @@ import {
   FaMapMarkerAlt
 } from 'react-icons/fa';
 import Image from 'next/image';
-import logo from "../../public/Libgallery_Logo.png";
+import logo from "../../public/LibGalleryLogo_V2.jpeg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,12 +23,19 @@ const Footer = () => {
          
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded flex items-center justify-center text-white font-bold">
-                <Image src={logo} alt="Libgallery Logo" width={30} height={30} />
-              </div>
+             <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center text-white font-bold">
+  <Image 
+    src={logo} 
+    alt="Libgallery Logo" 
+    width={32} 
+    height={32} 
+    className="object-cover"
+  />
+</div>
               <span className="text-xl font-bold text-gray-900 tracking-tight">
                 Libgallery
               </span>
+
             </div>
             <p className="text-sm leading-relaxed">
               Empowering readers worldwide with a seamless digital borrowing experience. 
