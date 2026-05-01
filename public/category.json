@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Story",
+    "slug": "story"
+  },
+  {
+    "id": 2,
+    "name": "Science",
+    "slug": "science"
+  },
+  {
+    "id": 3,
+    "name": "Tech",
+    "slug": "tech"
+  }
+]

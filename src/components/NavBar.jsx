@@ -21,14 +21,13 @@ const Navbar = () => {
       
         <div className="flex gap-2 items-center">
           <Link href="/" className="flex items-center gap-2">
-            <Image
-              src={logo}
-              alt="Libgallery Logo"
-              loading="eager"
-              width={30}
-              height={30}
-              className="object-cover h-auto w-auto"
-            />
+            <Image 
+  src={logo} 
+  alt="Libgallery" 
+  width={30} 
+  height={30} 
+  style={{ height: 'auto' }} 
+/>
             <h3 className="font-black text-lg tracking-tighter"><span className="text-indigo-600">Lib</span>gallery</h3>
           </Link>
         </div>
