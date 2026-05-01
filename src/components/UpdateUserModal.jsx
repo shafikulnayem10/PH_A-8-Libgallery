@@ -19,26 +19,30 @@ const onSubmit = async (e) => {
   const image = formData.get("image");
 
   try {
-    await updateUser({ name, image }, {
+   
+    await authClient.updateUser({ name, image }, {
       onRequest: () => {
         toast.loading("Updating profile...", { id: "update-user" });
       },
-    onSuccess: () => {
-  toast.success("Profile updated successfully!", { id: "update-user" });
-  
- 
-  window.location.reload(); 
+      onSuccess: () => {
+        toast.success("Profile updated successfully!", { id: "update-user" });
+        
+     
+        onOpenChange(false);
 
-
-
-  onOpenChange(false);
-},
+      
+        setTimeout(() => {
+          window.location.reload();
+        }, 800);
+      },
       onError: (ctx) => {
+       
         toast.error(ctx.error.message || "Failed to update profile", { id: "update-user" });
       }
     });
   } catch (error) {
-    toast.error("An unexpected error occurred", { id: "update-user" });
+  
+    console.error("Update error:", error);
   }
 };
 
