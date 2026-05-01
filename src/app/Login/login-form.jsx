@@ -1,6 +1,4 @@
-
 "use client";
-export const dynamic = 'force-dynamic';
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
