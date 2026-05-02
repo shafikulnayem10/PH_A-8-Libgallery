@@ -42,10 +42,11 @@ const Navbar = () => {
                 src={logo} 
                 alt="Logo" 
                 fill 
-                className="object-cover"
+                className="object-cover border-2 border-indigo-100 rounded-full transition-transform group-hover:scale-110"
               />
+              
             </div>
-            <h3 className="font-black text-xl tracking-tighter hidden xs:block">
+            <h3 className="font-black text-xl text-slate-700 group-hover:text-indigo-600 transition-colors">
               <span className="text-indigo-600">Lib</span>gallery
             </h3>
           </Link>
