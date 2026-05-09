@@ -28,15 +28,17 @@ export const metadata = {
   description:
     "Libgallery is a modern online book borrowing platform. Browse thousands of digital titles — from tech manuals to gripping stories — and borrow instantly.",
 
-  keywords: [
-    "online library",
-    "digital books",
-    "ebook borrowing",
-    "free books online",
-    "libgallery",
-    "book collection",
-    "read online",
-  ],
+keywords: [
+  "online library",
+  "online library Bangladesh",        
+  "online book borrowing Bangladesh",  
+  "digital library borrow books free", 
+  "libgallery online library",         
+  "digital books",
+  "ebook borrowing",
+  "free books online",
+  "libgallery",
+],
 
   authors: [{ name: "Libgallery Team", url: "https://ph-a-8-libgallery.vercel.app" }],
 
