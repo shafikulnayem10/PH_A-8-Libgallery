@@ -7,6 +7,63 @@ import { getBookDetailsById } from '@/lib/database';
 import { auth } from '@/lib/auth'; 
 import { headers } from 'next/headers';
 
+
+
+
+
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const book = await getBookDetailsById(id);
+
+  if (!book) {
+    return {
+      title: "Book Not Found",
+      description: "The requested book could not be found on Libgallery.",
+    };
+  }
+
+  return {
+    
+    title: book.title,
+
+    description: `${book.description?.slice(0, 155)}...`,
+
+    keywords: [
+      book.title,
+      book.author,
+      book.category,
+      "borrow book online",
+      "libgallery",
+    ],
+
+    openGraph: {
+      title: `${book.title} by ${book.author}`,
+      description: `${book.description?.slice(0, 155)}...`,
+      url: `https://ph-a-8-libgallery.vercel.app/allbooks/${id}`,
+      images: [
+        {
+          url: book.image_url,
+          width: 800,
+          height: 600,
+          alt: `${book.title} — book cover`,
+        },
+      ],
+      type: "article",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: `${book.title} by ${book.author}`,
+      description: `${book.description?.slice(0, 155)}...`,
+      images: [book.image_url],
+    },
+
+    alternates: {
+      canonical: `https://ph-a-8-libgallery.vercel.app/allbooks/${id}`,
+    },
+  };
+}
+
 export default async function BookDetailsPage({ params }) {
   const { id } = await params;
 

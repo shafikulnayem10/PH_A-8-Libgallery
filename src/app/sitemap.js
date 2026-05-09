@@ -1,4 +1,5 @@
 
+export const dynamic = 'force-dynamic';
 export async function getAllBooks() {
   const res = await fetch('https://ph-a-8-libgallery.vercel.app/data.json', {
     next: { revalidate: 3600 }
@@ -15,7 +16,10 @@ export async function getCategories() {
   return res.json();
 }
 
+
 export async function getBookDetailsById(id) {
   const books = await getAllBooks();
-  return books.find((p) => p.id == id);
+ 
+  const book = books.find((p) => p.id == id);
+  return book;
 }
