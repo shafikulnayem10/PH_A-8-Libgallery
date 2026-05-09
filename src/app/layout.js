@@ -82,6 +82,9 @@ export const metadata = {
   alternates: {
     canonical: "https://ph-a-8-libgallery.vercel.app",
   },
+  verification: {
+    google: "uCe_yd87BPCPOryhx17v0n8i0KWoAJx1WRRzujVYWag",
+  },
 };
 
 export default function RootLayout({ children }) {
