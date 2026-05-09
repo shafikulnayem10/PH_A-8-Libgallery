@@ -39,12 +39,7 @@ https://ph-a-8-libgallery.vercel.app/
   - Featured Books section  
 
 -  **SEO Optimized**  
-  Fully configured for search engine visibility:
-  - Dynamic `generateMetadata()` for every book detail page (unique title, description & Open Graph per book)  
-  - Global metadata in `layout.js` with Open Graph & Twitter Card support  
-  - Auto-generated `sitemap.xml` covering all book pages  
-  - `robots.txt` configured to protect private routes (`/profile`, `/login`)  
-  - Submitted to **Google Search Console** with indexing requested  
+  Fully configured for search engine visibility
 
 ---
 ##  Tech Stack & NPM Packages
