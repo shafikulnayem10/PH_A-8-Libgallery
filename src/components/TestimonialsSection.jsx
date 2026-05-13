@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 const TestimonialsSection = () => {
   const reviews = [
     { id: 1, name: "Rahim Uddin", role: "Reader", review: "Libgallery completely changed how I read. The digital borrowing system is so smooth — I got my book in seconds!", rating: 5 },
-    { id: 2, name: "Sumaiya Islam", role: "Tech Enthusiast", review: "The collection is massive. I found so many rare tech books I couldn't get anywhere else. Absolutely love this platform!", rating: 5 },
+    { id: 2, name: "Tajmun Nahar Tisha ", role: "Web Developer", review: "The collection is massive. I found so many rare tech books I couldn't get anywhere else. Absolutely love this platform!", rating: 5 },
     { id: 3, name: "Karim Hossain", role: "Student", review: "Clean interface, easy to navigate. The category filter makes finding books so much easier. Highly recommended!", rating: 4 },
     { id: 4, name: "Anika Tahsin", role: "Editor", review: "The UI is incredibly intuitive. As someone who handles hundreds of titles, this makes organization a breeze.", rating: 5 },
     { id: 5, name: "Zayan Ahmed", role: "Software Engineer", review: "I love the dark mode and the fast loading speeds. It's rare to see a library app this well-optimized.", rating: 5 },
