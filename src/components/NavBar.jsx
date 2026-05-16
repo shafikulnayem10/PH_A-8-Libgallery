@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState } from "react";
 import { authClient } from "@/lib/auth-client";
 import { Button } from "@heroui/react";
@@ -17,11 +17,12 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "All Books", href: "/allbooks" },
-    { name: "My Profile", href: "/profile" },
-  ];
+ const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "All Books", href: "/allbooks" },
+  { name: "My Borrowed Books", href: "/my-bookings" }, 
+  { name: "My Profile", href: "/profile" },
+];
 
   return (
     <div className="border-b px-4 sticky top-0 z-50 bg-white/90 backdrop-blur-md">

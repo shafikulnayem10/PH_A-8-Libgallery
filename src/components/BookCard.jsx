@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import { Card, Link as HeroLink } from "@heroui/react";
 import { CircleDollar } from "@gravity-ui/icons";

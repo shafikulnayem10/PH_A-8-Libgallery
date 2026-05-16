@@ -6,7 +6,8 @@ The platform allows users to explore a vast collection of books, filter them by 
 It prioritizes high performance and security to provide a smooth user experience for book enthusiasts.
 ---
 ##  Live URL
-https://ph-a-8-libgallery.vercel.app/
+http://localhost:3000
+/
 ---
 ##  Key Features
 - **Authentication System**  

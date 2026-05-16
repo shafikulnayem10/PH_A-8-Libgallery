@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 import { auth } from "./lib/auth";
 
 export async function proxy(request) {
@@ -18,5 +18,6 @@ export const config = {
   matcher: [
     "/profile",
     "/allbooks/:id+",
+    "/my-bookings",
   ],
 };

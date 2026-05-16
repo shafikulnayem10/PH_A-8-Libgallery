@@ -18,7 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://ph-a-8-libgallery.vercel.app"),
+  metadataBase: new URL("http://localhost:3000"),
+
 
   title: {
     default: "Libgallery | Find Your Next Read",
@@ -40,14 +41,14 @@ keywords: [
   "libgallery",
 ],
 
-  authors: [{ name: "Libgallery Team", url: "https://ph-a-8-libgallery.vercel.app" }],
+  authors: [{ name: "Libgallery Team", url: "http://localhost:3000" }],
 
   creator: "Libgallery",
 
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ph-a-8-libgallery.vercel.app",
+    url: "http://localhost:3000",
     siteName: "Libgallery",
     title: "Libgallery | Find Your Next Read",
     description:
@@ -82,7 +83,7 @@ keywords: [
   },
 
   alternates: {
-    canonical: "https://ph-a-8-libgallery.vercel.app",
+    canonical: "http://localhost:3000",
   },
   verification: {
     google: "uCe_yd87BPCPOryhx17v0n8i0KWoAJx1WRRzujVYWag",

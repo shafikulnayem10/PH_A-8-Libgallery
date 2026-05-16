@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { FiSearch } from "react-icons/fi";
 import { useRouter, useSearchParams } from "next/navigation";

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 // 1. Fix the import: Import authClient directly or just use updateUser
 import { authClient } from "@/lib/auth-client"; 

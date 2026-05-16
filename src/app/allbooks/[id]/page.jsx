@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import NextImage from 'next/image';
 import { Chip } from "@heroui/react";
 import { FiUser, FiInfo, FiLayers } from "react-icons/fi";
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${book.title} by ${book.author}`,
       description: `${book.description?.slice(0, 155)}...`,
-      url: `https://ph-a-8-libgallery.vercel.app/allbooks/${id}`,
+      url: `http://localhost:3000/allbooks/${id}`,
       images: [
         {
           url: book.image_url,
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }) {
     },
 
     alternates: {
-      canonical: `https://ph-a-8-libgallery.vercel.app/allbooks/${id}`,
+      canonical: `http://localhost:3000/allbooks/${id}`,
     },
   };
 }
@@ -125,7 +125,7 @@ export default async function BookDetailsPage({ params }) {
 
         
         
-     <BorrowButton isAvailable={book.available_quantity > 0} />
+    <BorrowButton isAvailable={book.available_quantity > 0} book={book} />
         </div>
       </div>
     </div>
