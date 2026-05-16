@@ -24,7 +24,9 @@ export default function BorrowButton({ isAvailable, book }) {
 
     try {
       
-      const { token } = await authClient.getToken();
+const { data: tokenData } = await authClient.token();
+const token = tokenData?.token;
+
 
       const bookingData = {
         bookId: book._id?.toString(),
