@@ -22,7 +22,7 @@ export default async function MyBookingsPage() {
 
   
 const res = await fetch(
-  `https://libgallery-server.vercel.app/bookings/${session.user.email}`,
+  `${process.env.NEXT_PUBLIC_SERVER_URL}/bookings/${session.user.email}`,
   {
     headers: {
       authorization: `Bearer ${token}`,
