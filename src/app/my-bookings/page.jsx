@@ -21,8 +21,10 @@ export default async function MyBookingsPage() {
   });
 
   
+const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL || "https://libgallery-server.vercel.app";
+
 const res = await fetch(
-  `${process.env.NEXT_PUBLIC_SERVER_URL}/bookings/${session.user.email}`,
+  `${SERVER_URL}/bookings/${session.user.email}`,
   {
     headers: {
       authorization: `Bearer ${token}`,
@@ -31,10 +33,13 @@ const res = await fetch(
   }
 );
 
+
+if (!res.ok) {
+  console.error("Fetch failed:", res.status);
+  return <MyBookingsClient bookings={[]} />;
+}
+
 const data = await res.json();
-console.log("bookings data:", data); 
-
-
 const bookings = Array.isArray(data) ? data : [];
 
 return <MyBookingsClient bookings={bookings} />;
