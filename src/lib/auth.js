@@ -23,9 +23,9 @@ export const auth = betterAuth({
   },
 
    trustedOrigins: [
-    "http://localhost:3000",
     "https://ph-a-8-libgallery.vercel.app",
+    "http://localhost:3000"
   ],
-  
+
   plugins: [jwt()],
 });

@@ -39,7 +39,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${book.title} by ${book.author}`,
       description: `${book.description?.slice(0, 155)}...`,
-      url: `http://localhost:3000/allbooks/${id}`,
+      url: `https://ph-a-8-libgallery.vercel.app/allbooks/${id}`,
       images: [
         {
           url: book.image_url,
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }) {
     },
 
     alternates: {
-      canonical: `http://localhost:3000/allbooks/${id}`,
+      canonical: `https://ph-a-8-libgallery.vercel.app/allbooks/${id}`,
     },
   };
 }

@@ -3,7 +3,7 @@ import BookCard from "./BookCard";
 
 const FeaturedBooks = async () => {
     
-    const res = await fetch('http://localhost:3000/data.json', {
+    const res = await fetch('https://ph-a-8-libgallery.vercel.app/data.json', {
         
     });
     const books = await res.json();

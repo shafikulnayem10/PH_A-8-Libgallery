@@ -4,7 +4,7 @@ import { Button } from "@heroui/react";
 import { toast } from "sonner";
 import { FiCheckCircle } from "react-icons/fi";
 import { useRouter } from "next/navigation";
-import { getSession } from "@/lib/auth-client";
+import { authClient, getSession } from "@/lib/auth-client";
 
 export default function BorrowButton({ isAvailable, book }) {
   const router = useRouter();
@@ -23,7 +23,9 @@ export default function BorrowButton({ isAvailable, book }) {
     setLoading(true);
 
     try {
-     
+      
+      const { token } = await authClient.getToken();
+
       const bookingData = {
         bookId: book._id?.toString(),
         bookName: book.title,
@@ -36,11 +38,17 @@ export default function BorrowButton({ isAvailable, book }) {
         status: "pending",
       };
 
-      const res = await fetch("https://libgallery-server.vercel.app/bookings", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(bookingData),
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/bookings`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(bookingData),
+        }
+      );
 
       const data = await res.json();
 
@@ -61,7 +69,6 @@ export default function BorrowButton({ isAvailable, book }) {
     }
   };
 
-  // Out of stock
   if (!isAvailable) {
     return (
       <Button
@@ -74,7 +81,6 @@ export default function BorrowButton({ isAvailable, book }) {
     );
   }
 
-  // Already borrowed
   if (borrowed) {
     return (
       <Button
@@ -87,7 +93,6 @@ export default function BorrowButton({ isAvailable, book }) {
     );
   }
 
-  // Default
   return (
     <Button
       onClick={handleBorrow}
