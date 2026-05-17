@@ -1,13 +1,23 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
 import { useState } from "react";
 
 export default function MyBookingsClient({ bookings: initialBookings }) {
   const [bookings, setBookings] = useState(initialBookings);
 
   const handleDelete = async (id) => {
-    const res = await fetch(`https://libgallery-server.vercel.app/bookings/${id}`, {
-      method: "DELETE",
-    });
+    const { data: tokenData } = await authClient.token();
+    const token = tokenData?.token;
+
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/bookings/${id}`, 
+      {
+        method: "DELETE",
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      }
+    );
     const data = await res.json();
     if (data.deletedCount > 0) {
       setBookings((prev) => prev.filter((b) => b._id !== id));
@@ -15,7 +25,9 @@ export default function MyBookingsClient({ bookings: initialBookings }) {
   };
 
   if (bookings.length === 0) {
-    return <p className="p-10 text-center text-slate-500">No Borrowed Books found!</p>;
+    return (
+      <p className="p-10 text-center text-slate-500">No Borrowed Books found!</p>
+    );
   }
 
   return (
