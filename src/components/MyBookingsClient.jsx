@@ -1,16 +1,42 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 export default function MyBookingsClient({ bookings: initialBookings }) {
   const [bookings, setBookings] = useState(initialBookings);
+  const [confirmId, setConfirmId] = useState(null); 
+  const router = useRouter();
 
-  const handleDelete = async (id) => {
+  const handleCancelClick = async (id) => {
+   
+    const { data: session } = await authClient.getSession();
+    if (!session?.user) {
+      toast.error("Please log in first!", {
+        description: "You need to be logged in to cancel a booking.",
+        action: {
+          label: "Log In",
+          onClick: () => router.push("/login"),
+        },
+      });
+      setTimeout(() => router.push("/login"), 2000);
+      return;
+    }
+
+   
+    setConfirmId(id);
+  };
+
+  const handleConfirmDelete = async () => {
+    const id = confirmId;
+    setConfirmId(null);
+
     const { data: tokenData } = await authClient.token();
     const token = tokenData?.token;
 
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/bookings/${id}`, 
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/bookings/${id}`,
       {
         method: "DELETE",
         headers: {
@@ -21,6 +47,11 @@ export default function MyBookingsClient({ bookings: initialBookings }) {
     const data = await res.json();
     if (data.deletedCount > 0) {
       setBookings((prev) => prev.filter((b) => b._id !== id));
+      toast.success("Booking cancelled!", {
+        description: "Your booking has been successfully cancelled.",
+      });
+    } else {
+      toast.error("Something went wrong. Try again!");
     }
   };
 
@@ -32,6 +63,35 @@ export default function MyBookingsClient({ bookings: initialBookings }) {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
+
+   
+      {confirmId && (
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center">
+          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-sm w-full mx-4">
+            <h3 className="text-lg font-black text-slate-800 mb-2">
+              Cancel Booking?
+            </h3>
+            <p className="text-slate-500 text-sm mb-6">
+              Are you sure you want to cancel this booking? This action cannot be undone.
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setConfirmId(null)}
+                className="flex-1 py-2.5 rounded-xl border border-slate-200 text-slate-600 font-bold text-sm hover:bg-slate-50 transition-all"
+              >
+                Keep It
+              </button>
+              <button
+                onClick={handleConfirmDelete}
+                className="flex-1 py-2.5 rounded-xl bg-red-500 hover:bg-red-600 text-white font-bold text-sm transition-all"
+              >
+                Yes, Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <h2 className="text-2xl font-black text-slate-700 mb-6">
         My Borrowed Books{" "}
         <span className="text-indigo-600">({bookings.length})</span>
@@ -70,7 +130,7 @@ export default function MyBookingsClient({ bookings: initialBookings }) {
                 </td>
                 <td className="px-4 py-3">
                   <button
-                    onClick={() => handleDelete(booking._id)}
+                    onClick={() => handleCancelClick(booking._id)}
                     className="text-red-500 hover:text-red-700 font-bold text-xs border border-red-200 px-3 py-1 rounded-full hover:bg-red-50 transition-all"
                   >
                     Cancel
