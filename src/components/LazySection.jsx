@@ -4,12 +4,12 @@ import dynamic from "next/dynamic"
 
 const TestimonialsSection = dynamic(() => import("@/components/TestimonialsSection"), {
   ssr: false,
-  loading: () => <div className="h-64" />,
+  loading: () => <p>Loading...</p>,
 })
 
 const QuoteSection = dynamic(() => import("@/components/QuoteSection"), {
   ssr: false,
-  loading: () => <div className="h-32" />,
+  loading: () => <p>Loading...</p>,
 })
 
 export default function LazySection() {
