@@ -29,7 +29,7 @@ const res = await fetch(
     headers: {
       authorization: `Bearer ${token}`,
     },
-    cache: "no-store",
+    next: { revalidate: 60 },
   }
 );
 
