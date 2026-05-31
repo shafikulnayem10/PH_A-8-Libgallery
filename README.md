@@ -1,5 +1,6 @@
 # Libgallery – Digital Library Platform
 **A fast, secure book borrowing app built with Next.js & Express**
+
 🔗 [Live Demo](https://ph-a-8-libgallery.vercel.app)
 
 ---
@@ -65,7 +66,9 @@ Optimized load performance using dynamic imports, CSS optimization, and server-s
 ## Tech Stack
 
 **Frontend:** Next.js 15, React, Tailwind CSS, HeroUI, BetterAuth
+
 **Backend:** Express.js, MongoDB, JWT (jose-cjs)
+
 **Auth:** BetterAuth + Google OAuth
 
 ---
@@ -104,9 +107,13 @@ Visit [http://localhost:3000](http://localhost:3000)
 ## What's Impressive Here
 
 🎯 **Full-stack ownership** — Designed, built, and deployed frontend + backend
+
 🔐 **Security-first** — JWT auth, duplicate prevention, protected routes
+
 ⚡ **Performance** — Achieved 98 (mobile) / 99 (desktop) PageSpeed score via lazy loading, CSS optimization, and font tuning
+
 📱 **Production-ready** — Responsive design, error handling, toast feedback
+
 🔍 **SEO** — Dynamic metadata per book for search visibility
 
 ---
